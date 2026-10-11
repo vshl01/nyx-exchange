@@ -1,0 +1,41 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "postinstall": "node -e \"const fs=require('fs'),d='node_modules/@lightprotocol/hasher.rs/dist/';for(const f of ['hasher_wasm_simd_bg.wasm','light_wasm_hasher_bg.wasm'])fs.copyFileSync(d+f,d+'browser-fat/es/'+f)\""
+  },
+  "dependencies": {
+    "@heliuslabs/zolana": "^0.4.0-alpha",
+    "@noble/curves": "^2.4.0",
+    "@noble/hashes": "^2.4.0",
+    "@solana-program/system": "^0.15.0",
+    "@solana-program/token": "^0.17.0",
+    "@solana/kit": "^8.4.0",
+    "@solana/react": "^8.4.0",
+    "@tanstack/react-query": "^5.104.1",
+    "@wallet-standard/react": "^1.0.3",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.55.0",
+    "motion": "^14.1.0",
+    "next": "16.4.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4.3.3",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^10.12.0",
+    "eslint-config-next": "^16.4.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3"
+  }
+}
