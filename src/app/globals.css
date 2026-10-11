@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-night-950 font-sans text-moon-100 antialiased;
+  }
+  ::selection {
+    @apply bg-aurora-violet/40 text-moon-50;
+  }
+}
+
+@utility text-aurora {
+  @apply bg-gradient-to-r from-aurora-lilac via-aurora-cyan to-aurora-lilac bg-clip-text text-transparent;
+  background-size: 200% auto;
+  animation: shimmer 6s linear infinite;
+}
+
+@utility glass {
+  @apply border border-white/[0.07] bg-night-850/60 backdrop-blur-xl;
+}
+
+@utility no-spinner {
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
